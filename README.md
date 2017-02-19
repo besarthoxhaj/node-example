@@ -60,3 +60,26 @@ in a file named `index.js` and run it with `node index.js`. Visit the server on
 [http://localhost:8080](http://localhost:8080).
 
 In a way this is all you need to know.
+
+```js
+process.env.PORT
+```
+
+Every program in the computer is a process, also node. Moreover every process
+has access to the environmental variables. An example will clarify:
+
+```
+$ PORT=8080 NAME=Bes node index.js
+```
+
+Inside index.js
+
+```js
+console.log('process',process);
+console.log('process.env',process.env);
+console.log('process.env.NAME',process.env.NAME); // Bes
+console.log('process.env.PORT',process.env.PORT); // 8080
+```
+
+Notice how we passed the variable `PORT=8080` and `NAME=Bes` from bash environment
+inside the node program. They are available inside the global object `process`.
