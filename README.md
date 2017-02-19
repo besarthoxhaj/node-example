@@ -3,6 +3,19 @@
 Small project created in nodejs. It servers an html form and by submitting it will
 post a message on `gazaskygeeks` gitter channel.
 
+## Run
+
+The app uses gitter TOKEN and you need one in order to run it. To get a token
+register to http://developer.gitter.im.
+
+Once you have the token set it as an environmental variable and run node:
+
+```
+$ TOKEN=<token> node index.js 
+```
+
+## Code
+
 Let's have a look at the code.
 
 ```js
