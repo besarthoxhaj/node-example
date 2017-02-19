@@ -61,18 +61,10 @@ in a file named `index.js` and run it with `node index.js`. Visit the server on
 
 In a way this is all you need to know.
 
-```js
-process.env.PORT
-```
+Every running computer program is a process, `nodejs` as well. Moreover every 
+process has access to the environmental variables. An example will clarify:
 
-Every program in the computer is a process, also node. Moreover every process
-has access to the environmental variables. An example will clarify:
-
-```
-$ PORT=8080 NAME=Bes node index.js
-```
-
-Inside index.js
+Let's suppose the following is our `index.js` file.
 
 ```js
 console.log('process',process);
@@ -81,5 +73,18 @@ console.log('process.env.NAME',process.env.NAME); // Bes
 console.log('process.env.PORT',process.env.PORT); // 8080
 ```
 
-Notice how we passed the variable `PORT=8080` and `NAME=Bes` from bash environment
-inside the node program. They are available inside the global object `process`.
+By running it with two env variable:
+
+```
+$ PORT=8080 NAME=Bes node index.js
+```
+
+Notice how we passed the variable `PORT=8080` and `NAME=Bes` from bash the
+environment to the node program. They are available inside the global object `process`.
+
+Why someone should do that? The answer is portability!
+
+When the code is deployed to Heroku, the remote machine will start `node` and will
+give one of the available ports. This means that we can not reserver a specific
+one but must allow flexibility. Heroku will set the `PORT` environmental variable
+at run time itself.
