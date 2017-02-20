@@ -5,6 +5,15 @@ post a message on `gazaskygeeks` gitter channel.
 
 ## Run
 
+Clone the project and install the dependencies:
+
+```
+$ git clone https://github.com/besarthoxhaj/node-example
+$ cd node-example
+$ npm install
+$ npm start
+```
+
 The app uses gitter TOKEN and you need one in order to run it. To get a token
 register to http://developer.gitter.im.
 
@@ -12,6 +21,14 @@ Once you have the token set it as an environmental variable and run node:
 
 ```
 $ TOKEN=<token> node index.js 
+```
+
+## Tests
+
+In order to run the tests:
+
+```
+$ npm test
 ```
 
 ## Code
