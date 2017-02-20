@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "node test/index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/besarthoxhaj/node-example/issues"
   },
-  "homepage": "https://github.com/besarthoxhaj/node-example#readme"
+  "homepage": "https://github.com/besarthoxhaj/node-example#readme",
+  "dependencies": {
+    "shot": "^3.4.0",
+    "tape": "^4.6.3"
+  }
 }
