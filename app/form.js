@@ -5,7 +5,6 @@ module.exports = function(req,res) {
 
   utils.parseBody(req,function(err,body){
 
-    var str = JSON.stringify(body);
     var postData = JSON.stringify({text:body.message});
     var dataLength = Buffer.byteLength(postData);
 
