@@ -1,4 +1,5 @@
 ## Node example
+[![Build Status](https://travis-ci.org/besarthoxhaj/node-example.svg?branch=master)](https://travis-ci.org/besarthoxhaj/node-example)
 
 Small project created in nodejs. It servers an html form and by submitting it will
 post a message on `gazaskygeeks` gitter channel.
